@@ -203,5 +203,28 @@ hi! link javaScriptNull	Constant
 hi! link javaScriptBraces	Normal
 
 "}}}
+" Highlights - Ruby ----------------------------------{{{
+exe "hi! rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold
+rubyInclude
+rubySharpBang
+rubyAccess
+rubyPredefinedVariable
+rubyBoolean
+rubyClassVariable
+rubyBeginEnd
+rubyRepeatModifier
+hi! link rubyArrayDelimiter    Special  " [ , , ]
+rubyCurlyBlock  { , , }
 
+hi! link rubyClass             Keyword
+hi! link rubyModule            Keyword
+hi! link rubyKeyword           Keyword
+hi! link rubyOperator          Operator
+hi! link rubyIdentifier        Identifier
+hi! link rubyInstanceVariable  Identifier
+hi! link rubyGlobalVariable    Identifier
+hi! link rubyClassVariable     Identifier
+hi! link rubyConstant          Type
+
+"}}}
 " vim: fdm=marker
