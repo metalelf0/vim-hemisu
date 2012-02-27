@@ -46,6 +46,8 @@ let s:lightGreen=      { "gui": "#BBFFAA", "cterm": "157" }
 let s:darkTan=         { "gui": "#503D15", "cterm": "52"  }
 let s:lightTan=        { "gui": "#ECE1C8", "cterm": "230" }
 
+let s:violet=          { "gui": "#B16F92" }
+
 " Assign to semantic categories based on background color
 if &background=="dark"
 	" Dark theme
@@ -146,6 +148,7 @@ call s:h("DiffText",     { "bg": s:faintRed, "gui": "bold", "cterm": "bold" })
 call s:h("User1",        { "fg": s:bg, "bg": s:normGreen })
 call s:h("User2",        { "fg": s:bg, "bg": s:normRed })
 call s:h("User3",        { "fg": s:bg, "bg": s:normBlue })
+call s:h("RubyFunction", { "fg": s:violet })
 hi! link WildMenu	IncSearch
 hi! link FoldColumn	SignColumn
 hi! link WarningMsg	ErrorMsg
@@ -225,6 +228,7 @@ hi! link rubyInstanceVariable  Identifier
 hi! link rubyGlobalVariable    Identifier
 hi! link rubyClassVariable     Identifier
 hi! link rubyConstant          Type
+hi! link rubyFunction          RubyFunction
 
 "}}}
 " vim: fdm=marker
