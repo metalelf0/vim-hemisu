@@ -207,17 +207,17 @@ hi! link javaScriptBraces	Normal
 
 "}}}
 " Highlights - Ruby ----------------------------------{{{
-exe "hi! rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold
-rubyInclude
-rubySharpBang
-rubyAccess
-rubyPredefinedVariable
-rubyBoolean
-rubyClassVariable
-rubyBeginEnd
-rubyRepeatModifier
-hi! link rubyArrayDelimiter    Special  " [ , , ]
-rubyCurlyBlock  { , , }
+" exe "hi! rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold
+" rubyInclude
+" rubySharpBang
+" rubyAccess
+" rubyPredefinedVariable
+" rubyBoolean
+" rubyClassVariable
+" rubyBeginEnd
+" rubyRepeatModifier
+" hi! link rubyArrayDelimiter    Special  " [ , , ]
+" rubyCurlyBlock  { , , }
 
 hi! link rubyClass             Keyword
 hi! link rubyModule            Keyword
