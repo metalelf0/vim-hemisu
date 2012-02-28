@@ -126,15 +126,15 @@ endif
 "}}}
 " Highlights - UI ------------------------------------------{{{
 call s:h("Normal",       { "fg": s:norm, "bg": s:bg })
-call s:h("NonText",      { "fg": s:subtle })
+call s:h("NonText",      { "fg": s:subtle, "bg": s:faint })
 call s:h("Cursor",       { "fg": s:bg, "bg": s:accent3 })
 call s:h("Visual",       { "bg": s:faintBlue })
 call s:h("IncSearch",    { "bg": s:faintBlue })
-call s:h("Search",       { "bg": s:faintGreen })
-call s:h("StatusLine",   { "fg": s:dimmed, "bg": s:faint })
-call s:h("StatusLineNC", { "fg": s:dimmed, "bg": s:faint })
+call s:h("Search",       { "bg": s:faintBlue })
+call s:h("StatusLine",   { "fg": s:faint, "bg": s:accent1, "gui": "bold,italic" })
+call s:h("StatusLineNC", { "fg": s:subtle, "bg": s:faint })
 call s:h("SignColumn",   { "fg": s:norm })
-call s:h("VertSplit",    { "fg": s:subtle, "bg": s:faint })
+call s:h("VertSplit",    { "fg": s:subtle, "bg": s:subtle })
 call s:h("TabLine",      { "fg": s:dimmed, "bg": s:faint })
 call s:h("TabLineSel",   { "gui": "bold", "cterm": "bold" })
 call s:h("Folded",       { "fg": s:comment, "bg": s:faint })
@@ -148,7 +148,6 @@ call s:h("DiffText",     { "bg": s:faintRed, "gui": "bold", "cterm": "bold" })
 call s:h("User1",        { "fg": s:bg, "bg": s:normGreen })
 call s:h("User2",        { "fg": s:bg, "bg": s:normRed })
 call s:h("User3",        { "fg": s:bg, "bg": s:normBlue })
-call s:h("RubyFunction", { "fg": s:violet })
 hi! link WildMenu	IncSearch
 hi! link FoldColumn	SignColumn
 hi! link WarningMsg	ErrorMsg
@@ -168,8 +167,8 @@ call s:h("Underlined", { "fg": s:accent1, "gui": "underline", "cterm": "underlin
 call s:h("Type",       { "fg": s:accent3 })
 call s:h("String",     { "fg": s:accent2 })
 call s:h("Keyword",    { "fg": s:accent2, "gui": "bold", "cterm": "bold" })
-call s:h("Todo",       { "fg": s:normRed, "gui": "bold", "cterm": "bold" })
-call s:h("Function",   { "gui": "bold", "cterm": "bold" })
+call s:h("Todo",       { "fg": s:normRed, "gui": "italic,bold,underline", "cterm": "bold" })
+call s:h("Function",   { "fg": s:dimmed, "gui": "bold", "cterm": "bold" })
 hi! link Identifier	Function
 hi! link Statement	Type
 hi! link Constant	Directory
@@ -207,18 +206,9 @@ hi! link javaScriptBraces	Normal
 
 "}}}
 " Highlights - Ruby ----------------------------------{{{
-" exe "hi! rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold
-" rubyInclude
-" rubySharpBang
-" rubyAccess
-" rubyPredefinedVariable
-" rubyBoolean
-" rubyClassVariable
-" rubyBeginEnd
-" rubyRepeatModifier
-" hi! link rubyArrayDelimiter    Special  " [ , , ]
-" rubyCurlyBlock  { , , }
-
+call s:h("RubyFunction", { "fg": s:violet })
+call s:h("RubyAccess",   { "fg": s:normGreen, "gui": "bold", "cterm": "bold" })
+call s:h("RubyBlock",    { "fg": s:comment })
 hi! link rubyClass             Keyword
 hi! link rubyModule            Keyword
 hi! link rubyKeyword           Keyword
@@ -229,6 +219,8 @@ hi! link rubyGlobalVariable    Identifier
 hi! link rubyClassVariable     Identifier
 hi! link rubyConstant          Type
 hi! link rubyFunction          RubyFunction
+hi! link rubyBlock             RubyBlock
+hi! link rubyAccess            RubyAccess
 
 "}}}
 " vim: fdm=marker
