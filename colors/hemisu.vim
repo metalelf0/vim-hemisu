@@ -46,7 +46,7 @@ let s:lightGreen=      { "gui": "#BBFFAA", "cterm": "157" }
 let s:darkTan=         { "gui": "#503D15", "cterm": "52"  }
 let s:lightTan=        { "gui": "#ECE1C8", "cterm": "230" }
 
-let s:violet=          { "gui": "#B16F92", "cterm": "195" }
+let s:violet=          { "gui": "#B16F92", "cterm": "99" }
 
 " Assign to semantic categories based on background color
 if &background=="dark"
@@ -128,9 +128,9 @@ endif
 call s:h("Normal",       { "fg": s:norm, "bg": s:bg })
 call s:h("NonText",      { "fg": s:subtle, "bg": s:faint })
 call s:h("Cursor",       { "fg": s:bg, "bg": s:accent3 })
-call s:h("Visual",       { "bg": s:faintBlue })
-call s:h("IncSearch",    { "bg": s:faintBlue })
-call s:h("Search",       { "bg": s:faintBlue })
+call s:h("Visual",       { "fg": s:faint, "bg": s:accent3 })
+call s:h("IncSearch",    { "fg": s:faint, "bg": s:normBlue })
+call s:h("Search",       { "fg": s:faint, "bg": s:normBlue })
 call s:h("StatusLine",   { "fg": s:faint, "bg": s:accent1, "gui": "bold,italic" })
 call s:h("StatusLineNC", { "fg": s:subtle, "bg": s:faint })
 call s:h("SignColumn",   { "fg": s:norm })
@@ -206,7 +206,7 @@ hi! link javaScriptBraces	Normal
 
 "}}}
 " Highlights - Ruby ----------------------------------{{{
-call s:h("RubyFunction", { "fg": s:violet })
+call s:h("RubyFunction", { "fg": s:violet, "cterm": "bold" })
 call s:h("RubyAccess",   { "fg": s:normGreen, "gui": "bold", "cterm": "bold" })
 call s:h("RubyBlock",    { "fg": s:comment })
 hi! link rubyClass             Keyword
