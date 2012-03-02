@@ -46,7 +46,7 @@ let s:lightGreen=      { "gui": "#BBFFAA", "cterm": "157" }
 let s:darkTan=         { "gui": "#503D15", "cterm": "52"  }
 let s:lightTan=        { "gui": "#ECE1C8", "cterm": "230" }
 
-let s:violet=          { "gui": "#B16F92", "cterm": "99" }
+let s:violet=          { "gui": "#B16F92", "cterm": "176" }
 
 " Assign to semantic categories based on background color
 if &background=="dark"
