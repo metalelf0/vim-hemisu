@@ -104,7 +104,7 @@ endfunction
 " Highlights - Vim >= 7 ------------------------------------{{{
 if version >= 700
 	call s:h("CursorLine",  { "bg": s:faint })
-	call s:h("MatchParen",  { "fg": s:accent1, "bg": s:faint, "gui": "bold" })
+	call s:h("MatchParen",  { "fg": s:accent1, "bg": s:faintRed, "gui": "bold" })
 	call s:h("Pmenu",       { "bg": s:faint })
 	call s:h("PmenuThumb",  { "bg": s:norm })
 	call s:h("PmenuSBar",   { "bg": s:subtle })
