@@ -231,5 +231,12 @@ hi! link rubyBlock             RubyBlock
 hi! link rubyAccess            RubyAccess
 
 "}}}
+" Highlights - Easymotion ----------------------------------{{{
+call s:h("EasyMotionShade",         { "fg": s:comment, "bg": s:bg })
+call s:h("EasyMotionTarget",        { "fg": s:faint,   "bg": s:accent1 })
+call s:h("EasyMotionTarget2First",  { "fg": s:faint,   "bg": s:accent3 })
+call s:h("EasyMotionTarget2Second", { "fg": s:faint,   "bg": s:accent3 })
+" }}}
 
 " vim: fdm=marker:sw=2:sts=2:et
+
