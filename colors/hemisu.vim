@@ -103,26 +103,6 @@ endfunction
 "}}}
 " Highlights - Vim >= 7 ------------------------------------{{{
 if version >= 700
-<<<<<<< HEAD
-  call s:h("CursorLine",  { "bg": s:faint })
-  call s:h("MatchParen",  { "fg": s:accent1, "bg": s:faint, "gui": "bold" })
-  call s:h("Pmenu",       { "bg": s:faint })
-  call s:h("PmenuThumb",  { "bg": s:norm })
-  call s:h("PmenuSBar",   { "bg": s:subtle })
-  call s:h("PmenuSel",    { "bg": s:faintBlue })
-  call s:h("ColorColumn", { "bg": s:faintRed })
-  call s:h("SpellBad",    { "sp": s:normRed, "gui": "undercurl" })
-  call s:h("SpellCap",    { "sp": s:accent1, "gui": "undercurl" })
-  call s:h("SpellRare",   { "sp": s:normGreen, "gui": "undercurl" })
-  call s:h("SpellLocal",  { "sp": s:accent4, "gui": "undercurl" })
-  hi! link CursorColumn	CursorLine
-
-  " Use background for cterm Spell*, which does not support undercurl
-  execute "hi! SpellBad   ctermbg=" s:faintRed.cterm
-  execute "hi! SpellCap   ctermbg=" s:faintBlue.cterm
-  execute "hi! SpellRare  ctermbg=" s:faintGreen.cterm
-  execute "hi! SpellLocal ctermbg=" s:faint.cterm
-=======
 	call s:h("CursorLine",  { "bg": s:faint })
 	call s:h("MatchParen",  { "fg": s:accent1, "bg": s:faintRed, "gui": "bold" })
 	call s:h("Pmenu",       { "bg": s:faint })
@@ -141,7 +121,6 @@ if version >= 700
 	execute "hi! SpellCap   ctermbg=" s:faintBlue.cterm
 	execute "hi! SpellRare  ctermbg=" s:faintGreen.cterm
 	execute "hi! SpellLocal ctermbg=" s:faint.cterm
->>>>>>> 5f8d5f955b43e823286ba6afa00b61270703bacf
 endif
 
 "}}}
@@ -187,17 +166,6 @@ call s:h("Underlined", { "fg": s:accent1, "gui": "underline", "cterm": "underlin
 call s:h("Type",       { "fg": s:accent3 })
 call s:h("String",     { "fg": s:accent2 })
 call s:h("Keyword",    { "fg": s:accent2, "gui": "bold", "cterm": "bold" })
-<<<<<<< HEAD
-call s:h("Todo",       { "fg": s:normRed, "gui": "bold", "cterm": "bold" })
-call s:h("Function",   { "gui": "bold", "cterm": "bold" })
-hi! link Identifier  Function
-hi! link Statement   Type
-hi! link Constant    Directory
-hi! link Number      Constant
-hi! link Special     Constant
-hi! link PreProc     Constant
-hi! link Error       ErrorMsg
-=======
 call s:h("Todo",       { "fg": s:normRed, "gui": "italic,bold,underline", "cterm": "bold" })
 call s:h("Function",   { "fg": s:dimmed, "gui": "bold", "cterm": "bold" })
 hi! link Identifier	Function
@@ -207,7 +175,6 @@ hi! link Number		Constant
 hi! link Special	Constant
 hi! link PreProc	Constant
 hi! link Error		ErrorMsg
->>>>>>> 5f8d5f955b43e823286ba6afa00b61270703bacf
 
 "}}}
 " Highlights - HTML ----------------------------------------{{{
